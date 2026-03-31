@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPDev UI Core | Test</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="ui-core.css">
+</head>
+
+<body>
+
+    <div class="test-container">
+        <h2>Componente: Smart Accordion</h2>
+
+        <div class="gp-accordion" data-accordion="single">
+
+            <div class="gp-accordion-item">
+                <button class="gp-accordion-trigger" aria-expanded="false" aria-controls="panel-1" id="trigger-1">
+                    <span>¿Qué es el DOM y por qué es crítico optimizarlo?</span>
+                    <i class="fa-solid fa-chevron-down icon"></i>
+                </button>
+                <div class="gp-accordion-content" id="panel-1" role="region" aria-labelledby="trigger-1" hidden>
+                    <div class="gp-accordion-inner">
+                        <p>El Document Object Model (DOM) es la representación en árbol que hace el navegador de un documento HTML. Modificar el DOM es una operación "costosa" en términos de rendimiento porque obliga al motor de renderizado a recalcular estilos y posiciones (procesos conocidos como Reflow y Repaint).</p>
+                        <p>Comprender su física a bajo nivel es el primer paso para escribir código verdaderamente eficiente, independientemente del framework que se utilice.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gp-accordion-item">
+                <button class="gp-accordion-trigger" aria-expanded="false" aria-controls="panel-2" id="trigger-2">
+                    <span>Paradigmas: Programación Funcional vs. Orientada a Objetos</span>
+                    <i class="fa-solid fa-chevron-down icon"></i>
+                </button>
+                <div class="gp-accordion-content" id="panel-2" role="region" aria-labelledby="trigger-2" hidden>
+                    <div class="gp-accordion-inner">
+                        <p>Los paradigmas dictan cómo estructuramos la lógica:</p>
+                        <ul>
+                            <li><strong>Orientada a Objetos (POO):</strong> Agrupa estado y comportamiento en "objetos". Ideal para modelar sistemas complejos con entidades claras (ej. C#, Java).</li>
+                            <li><strong>Funcional:</strong> Se basa en funciones puras y datos inmutables. Excelente para concurrencia y predecir el flujo de datos sin efectos secundarios (ej. Haskell, Elixir).</li>
+                        </ul>
+                        <p>Los lenguajes modernos como JavaScript o Python son multiparadigma, permitiendo combinar la potencia de ambos enfoques.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gp-accordion-item">
+                <button class="gp-accordion-trigger" aria-expanded="false" aria-controls="panel-3" id="trigger-3">
+                    <span>Arquitectura de Lenguajes: ¿Cuál elegir según el caso de uso?</span>
+                    <i class="fa-solid fa-chevron-down icon"></i>
+                </button>
+                <div class="gp-accordion-content" id="panel-3" role="region" aria-labelledby="trigger-3" hidden>
+                    <div class="gp-accordion-inner">
+                        <p>No existe el "mejor" lenguaje, sino la herramienta adecuada para el problema:</p>
+                        <ul>
+                            <li><strong>Python:</strong> Sintaxis limpia y ecosistema gigante. Es el rey indiscutible para Inteligencia Artificial, Machine Learning y análisis de datos.</li>
+                            <li><strong>JavaScript/TypeScript:</strong> Monopolio en el frontend y altamente asíncrono en el servidor (Node.js). Perfecto para I/O intensivo.</li>
+                            <li><strong>Rust / Go:</strong> Lenguajes de sistemas. Se utilizan cuando el rendimiento bruto, el control de memoria y la concurrencia extrema son obligatorios.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gp-accordion-item">
+                <button class="gp-accordion-trigger" aria-expanded="false" aria-controls="panel-4" id="trigger-4">
+                    <span>El patrón de diseño MVC (Modelo-Vista-Controlador)</span>
+                    <i class="fa-solid fa-chevron-down icon"></i>
+                </button>
+                <div class="gp-accordion-content" id="panel-4" role="region" aria-labelledby="trigger-4" hidden>
+                    <div class="gp-accordion-inner">
+                        <p>El patrón MVC separa las responsabilidades de una aplicación para garantizar su escalabilidad:</p>
+                        <ul>
+                            <li><strong>Modelo:</strong> Contiene las reglas de negocio y la lógica de acceso a la base de datos.</li>
+                            <li><strong>Vista:</strong> La interfaz que consume el usuario. Debe ser "tonta" y no contener lógica de negocio.</li>
+                            <li><strong>Controlador:</strong> Escucha los eventos, procesa la entrada, interactúa con el Modelo y ordena a la Vista que se actualice.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gp-accordion-item">
+                <button class="gp-accordion-trigger" aria-expanded="false" aria-controls="panel-5" id="trigger-5">
+                    <span>Inteligencia Artificial y LLMs en el ecosistema actual</span>
+                    <i class="fa-solid fa-chevron-down icon"></i>
+                </button>
+                <div class="gp-accordion-content" id="panel-5" role="region" aria-labelledby="trigger-5" hidden>
+                    <div class="gp-accordion-inner">
+                        <p>Los Modelos de Lenguaje Grande (LLMs) han revolucionado la interacción humano-máquina. Al integrarlos mediante APIs, los arquitectos pueden construir "Agentes Inteligentes" capaces de:</p>
+                        <ul>
+                            <li>Comprender lenguaje natural y contexto semántico.</li>
+                            <li>Automatizar la toma de decisiones basada en datos no estructurados.</li>
+                            <li>Generar, refactorizar o auditar código en tiempo real.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gp-accordion-item">
+                <button class="gp-accordion-trigger" aria-expanded="false" aria-controls="panel-6" id="trigger-6">
+                    <span>Arquitectura RAG (Retrieval-Augmented Generation)</span>
+                    <i class="fa-solid fa-chevron-down icon"></i>
+                </button>
+                <div class="gp-accordion-content" id="panel-6" role="region" aria-labelledby="trigger-6" hidden>
+                    <div class="gp-accordion-inner">
+                        <p>Uno de los mayores retos de la IA generativa es la "alucinación" (inventar información). <strong>RAG</strong> soluciona esto combinando un modelo de lenguaje con una base de datos vectorial externa.</p>
+                        <p>En lugar de depender de su memoria de entrenamiento, el sistema primero busca documentos reales, y luego obliga a la IA a formular su respuesta basándose estrictamente en esos datos inyectados en su contexto. Es el estándar actual para despliegues corporativos seguros.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="ui-core.js"></script>
+</body>
+
+</html>

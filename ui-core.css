@@ -1,0 +1,105 @@
+/* =========================================
+   Estilos de mi Componente: Acordeón
+   ========================================= */
+.gp-accordion {
+    --border-color: rgba(255, 255, 255, 0.1);
+    --bg-hover: rgba(0, 219, 197, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    /* Añado sombra para darle volumen */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Mi botón disparador */
+.gp-accordion-trigger {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background: transparent;
+    color: #f4f4f4;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.gp-accordion-trigger:hover {
+    background: var(--bg-hover);
+    color: #00dbc5;
+}
+
+/* Animo mi icono */
+.gp-accordion-trigger[aria-expanded="true"] .icon {
+    transform: rotate(180deg);
+}
+
+.gp-accordion-trigger .icon {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    color: #00dbc5;
+}
+
+/* EL SECRETO DE LA FLUIDEZ: Animo mi Grid directamente sin interrupciones */
+.gp-accordion-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Cuando inyecto mi clase is-open, el grid se expande fluidamente */
+.gp-accordion-item.is-open .gp-accordion-content {
+    grid-template-rows: 1fr;
+}
+
+/* Protejo el contenido interior para que no se desborde durante la animación */
+.gp-accordion-inner {
+    overflow: hidden;
+    padding: 0 1.5rem;
+    color: #a0a0a0;
+    line-height: 1.6;
+}
+
+/* Mis textos extra para que se vean elegantes */
+.gp-accordion-inner p {
+    margin-bottom: 1rem;
+}
+
+.gp-accordion-inner ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.gp-accordion-inner strong {
+    color: #f4f4f4;
+}
+
+/* Controlo los márgenes interiores fluidamente */
+.gp-accordion-item.is-open .gp-accordion-inner {
+    padding-bottom: 1.5rem;
+    padding-top: 0.5rem;
+}
+
+body {
+    background-color: #050505;
+    color: #f4f4f4;
+    font-family: 'Montserrat', sans-serif;
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.test-container {
+    width: 100%;
+    max-width: 800px;
+    /* Lo hago más ancho para que los textos respiren */
+}
+
+h2 {
+    margin-bottom: 2rem;
+    color: #00dbc5;
+    text-align: center;
+}
